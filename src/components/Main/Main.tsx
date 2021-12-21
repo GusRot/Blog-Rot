@@ -1,11 +1,9 @@
 import { Box, Container, Grid } from "@mui/material";
-import * as React from "react";
+import React from "react";
 import Cards from "../Cards/Cards";
 import Music from "../Music/Music";
-import Stack from "../Stack/Stack";
-import Transition from "../Transition/Transition";
 
-export default function App() {
+export default function Main() {
     return (
         <>
             <Box
@@ -46,22 +44,6 @@ export default function App() {
                     </Grid>
                 </Grid>
             </Container>
-            <Box
-                sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    margin: "10px",
-                }}
-            >
-                <Stack />
-            </Box>
-            <Box
-                sx={{
-                    margin: "10px",
-                }}
-            >
-                <Transition />
-            </Box>
         </>
     );
 }

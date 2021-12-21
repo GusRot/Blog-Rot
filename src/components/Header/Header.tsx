@@ -12,7 +12,20 @@ import MenuItem from "@mui/material/MenuItem";
 import { MyApp } from "../../theme";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Profissional", "Sobre", "Curiosidade"];
+const pages = [
+    {
+        text: "Profissional",
+        link: "/",
+    },
+    {
+        text: "Sobre",
+        link: "/sobre",
+    },
+    {
+        text: "Curiosidade",
+        link: "/text",
+    },
+];
 
 export default function Header() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -24,9 +37,9 @@ export default function Header() {
         setAnchorElNav(event.currentTarget);
     };
 
-    const handleCloseNavMenu = () => {
+    const handleCloseNavMenu = (path: string) => {
         setAnchorElNav(null);
-        navigate("/home");
+        navigate(`${path}`);
     };
 
     return (
@@ -71,18 +84,20 @@ export default function Header() {
                                 horizontal: "left",
                             }}
                             open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
+                            onClose={() => handleCloseNavMenu("/")}
                             sx={{
                                 display: { xs: "block", md: "none" },
                             }}
                         >
                             {pages.map((page) => (
                                 <MenuItem
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
+                                    key={page.text}
+                                    onClick={() =>
+                                        handleCloseNavMenu(page.link)
+                                    }
                                 >
                                     <Typography textAlign="center">
-                                        {page}
+                                        {page.text}
                                     </Typography>
                                 </MenuItem>
                             ))}
@@ -107,11 +122,11 @@ export default function Header() {
                     >
                         {pages.map((page) => (
                             <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
+                                key={page.link}
+                                onClick={() => handleCloseNavMenu(page.link)}
                                 sx={{ my: 2, color: "white", display: "block" }}
                             >
-                                {page}
+                                {page.text}
                             </Button>
                         ))}
                     </Box>
