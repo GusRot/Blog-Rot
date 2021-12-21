@@ -79,9 +79,5 @@ p {
 	font-weight: 400;	
 }
 
-main {
-    width: 100%;
-	max-width: 1024px;
-	margin: 0 auto;
-}
+
 `;

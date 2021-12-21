@@ -1,5 +1,10 @@
-import React from "react";
+import * as React from "react";
+import Router from "./components/Router/Router";
 
-export default function DarkThemeWithCustomPalette() {
-    return <h1>Teste</h1>;
+export default function App() {
+    return (
+        <>
+            <Router />
+        </>
+    );
 }
