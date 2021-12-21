@@ -26,7 +26,13 @@ export default function Transition() {
                 control={<Switch checked={checked} onChange={handleChange} />}
                 label="Show"
             />
-            <Box sx={{ display: "flex" }}>
+            <Box
+                sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                }}
+            >
                 <Grow in={checked}>{icon}</Grow>
                 {/* Conditionally applies the timeout prop to change the entry speed. */}
                 <Grow

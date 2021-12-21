@@ -6,7 +6,6 @@ import IconButton from "@mui/material/IconButton";
 import { amber, deepOrange, grey } from "@mui/material/colors";
 import { PaletteMode, Typography } from "@mui/material";
 import App from "./App";
-import { GlobalStyle } from "./components/Styles/Global";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -98,7 +97,6 @@ export default function ToggleColorMode() {
                         <App />
                         <Box sx={{ height: "100vh" }} />
                     </Container>
-                    <GlobalStyle />
                 </BrowserRouter>
             </ThemeProvider>
         </ColorModeContext.Provider>

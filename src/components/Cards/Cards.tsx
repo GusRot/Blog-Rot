@@ -11,8 +11,8 @@ export default function Cards() {
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
+                    width="140"
+                    image="https://bn02pap001files.storage.live.com/y4mKqNL58eXL9UnUFbAJv0QLB3hQ8bIsSyc-EKtcRKn4ZsGrXysZt7niye5t0n3uAS-3lKkWowjtZRMgbc17Mv9B8To92fwoJH8jlm9ahxokjYkvtZP5ve-3bAa6R8bTTU_-2PHMM4-tK1BKAKMQKUDmBOam32_nZNTfdt1zL_sTRgjfWMYlADTckxZgNOiM7Mk?width=600&height=600&cropmode=none"
                     alt="green iguana"
                 />
                 <CardContent>
